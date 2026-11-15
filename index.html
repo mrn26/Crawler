@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#080b10">
+  <title>Dungeon Crawler</title>
+  <style>
+    * { box-sizing: border-box; }
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #080b10;
+      touch-action: none;
+      font-family: sans-serif;
+    }
+    canvas { display: block; }
+    #hud {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      color: white;
+      z-index: 5;
+      pointer-events: none;
+      font-size: 14px;
+    }
+    #joystick {
+      position: fixed;
+      bottom: 35px;
+      left: 30px;
+      width: 120px;
+      height: 120px;
+      border: 2px solid #ffffff55;
+      border-radius: 50%;
+      background: #ffffff15;
+      z-index: 5;
+      touch-action: none;
+    }
+    #stick {
+      position: absolute;
+      width: 46px;
+      height: 46px;
+      left: 35px;
+      top: 35px;
+      border-radius: 50%;
+      background: #ffffff99;
+    }
+    #lookArea {
+      position: fixed;
+      right: 0;
+      top: 0;
+      width: 60%;
+      height: 100%;
+      z-index: 2;
+      touch-action: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="hud">DUNGEON CRAWLER</div>
+  <div id="joystick"><div id="stick"></div></div>
+  <div id="lookArea"></div>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js"
+      }
+    }
+  </script>
+  <script type="module" src="./game.js"></script>
+</body>
+</html>
